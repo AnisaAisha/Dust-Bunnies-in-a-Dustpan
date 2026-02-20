@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    downsampling: 1
+    downsampling: 4
     stage: 2
     intensity: 2.1
     scattering: -0.02
