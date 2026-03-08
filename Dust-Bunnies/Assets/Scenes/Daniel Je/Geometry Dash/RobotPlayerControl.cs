@@ -5,7 +5,7 @@ public class RobotPlayerControl : MonoBehaviour
     [SerializeField]
     private float upwardAcceleration = 100;
     [SerializeField]
-    private float forwardAcceleration = 10;
+    private float forwardVelocity = 10;
     [SerializeField]
     private float airTime = 0.5f;
     [SerializeField]
@@ -13,25 +13,28 @@ public class RobotPlayerControl : MonoBehaviour
     private bool _isHolding = false;
     private float _airTimer = 0;
     private Rigidbody _rb;
-    private float _startingY;
-    private bool alive = true;
+    private bool _alive = true;
+    private bool _touchingGround = true;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _startingY = transform.position.y;
-        _rb.linearVelocity = new Vector3(forwardAcceleration, 0, 0);
+        _rb.linearVelocity = new Vector3(forwardVelocity, 0, 0);
     }
 
     void FixedUpdate()
     {
-        if (alive) {
-            if (Input.GetMouseButton(0) && _airTimer <= airTime)
+        if (_alive)
+        {
+            if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) && _airTimer <= airTime)
             {
-                if (transform.position.y - (_startingY) <= 0.01)
+                if (_touchingGround)
                 {
+                    if (_isHolding == false)
+                        _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, upwardAcceleration/10, 0);
                     _isHolding = true;
                 }
                 _rb.AddForce(transform.up * upwardAcceleration);
+                _touchingGround = false;
             }
             else
             {
@@ -42,23 +45,32 @@ public class RobotPlayerControl : MonoBehaviour
                 }
                 _rb.AddForce(Physics.gravity * gravity);
             }
-            if (transform.position.y - (_startingY) <= 0.01)
+            if (_touchingGround)
             {
                 _airTimer = 0;
             }
             _airTimer += Time.fixedDeltaTime;
-            _rb.AddForce(Vector3.right * forwardAcceleration);
         }
+        Debug.Log(_rb.linearVelocity);
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("dead");
-        Die();
+        if (other.gameObject.GetComponent<Hazard>() != null)
+        {
+            Die();
+        }
     }
     void Die()
     {
         // Add death logic here
         _rb.linearVelocity = new Vector3(0, 0, 0);
-        alive = false;
+        _alive = false;
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Floor>() != null)
+        {
+            _touchingGround = true;
+        }
     }
 }
