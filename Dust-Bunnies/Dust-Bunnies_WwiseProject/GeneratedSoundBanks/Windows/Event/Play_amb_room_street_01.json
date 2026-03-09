@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2134236060",
+    "Type": "Event",
+    "GUID": "{16FB0287-D14A-428F-95E6-F8DACDE42ADC}",
+    "Language": "SFX",
+    "Hash": "{BAFBE1FE-ADED-BE4E-11EE-94B16A4EE3BA}",
+    "ObjectPath": "Play_amb_room_street_01",
+    "ShortName": "Play_amb_room_street_01",
+    "Path": "Event/Play_amb_room_street_01.bnk",
+    "Media": [
+     {
+      "Id": "860070968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_room_street_01.wav",
+      "Path": "Media/860070968.wem",
+      "CachePath": "EB/{EB4E6E19-EE80-63C2-6228-7F21AC2AC516}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2134236060",
+      "Name": "Play_amb_room_street_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_amb_room_street_01",
+      "GUID": "{16FB0287-D14A-428F-95E6-F8DACDE42ADC}",
+      "MaxAttenuation": "10",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "860070968"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{990AA3C2-0CC2-8675-737A-7D22299FAABD}"
+ }
+}
