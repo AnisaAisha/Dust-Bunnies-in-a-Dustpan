@@ -13,8 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMB_ROOM_INTERIOR_01 = 3152322375U;
         static const AkUniqueID PLAY_AMB_ROOM_STREET_01 = 2134236060U;
-        static const AkUniqueID PLAY_TEST_LOOP = 3693062971U;
     } // namespace EVENTS
 
     namespace SWITCHES
