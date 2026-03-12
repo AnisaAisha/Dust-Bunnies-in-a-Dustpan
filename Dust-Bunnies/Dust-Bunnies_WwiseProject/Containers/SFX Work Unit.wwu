@@ -453,7 +453,6 @@
 				</Folder>
 				<RandomSequenceContainer Name="Sparkle" ID="{EF454E15-620B-491B-B858-5AEC866624B6}" ShortID="229252729">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -481,6 +480,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="gp_sparkle_01" ID="{00927800-FD91-4863-BF99-DB619F3D4BF1}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>gp_sparkle_01.wav</AudioFile>
 									<MediaIDList>
@@ -503,6 +505,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="gp_sparkle_02" ID="{8615095B-6A58-4A6D-9034-08EA672902C6}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>gp_sparkle_02.wav</AudioFile>
 									<MediaIDList>
@@ -586,6 +591,41 @@
 							<PropertyList>
 								<Property Name="PanX" Type="Real64" Value="-1.11022302462516E-16"/>
 							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{BA91185D-1421-4F73-B552-5B29ACC19220}" ShortID="585148100">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="PanX"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="CandlePan" ID="{68674527-2BB2-460D-A004-80EF02439885}" WorkUnitID="{1084BDEC-3701-4C54-B748-D1FB0B09AB5E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{DC587173-9DBE-4460-9386-C9F66BA56BD7}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-1</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 						</Panner>
 						<Position Name="" ID="{03132A11-DD69-43A0-97BE-6515051C51DF}"/>
 					</PositioningInfo>
