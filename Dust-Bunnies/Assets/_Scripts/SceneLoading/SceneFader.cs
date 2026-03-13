@@ -17,6 +17,11 @@ public class SceneFader : MonoBehaviour
 
     public void FadeTo(int index)
     {
+        Debug.Log("To Scene: " + index);
+
+        // TODO: bootstrapped
+        //if (index > SceneManager.sceneCount) { index = 0; }
+
         StartCoroutine(FadeOut(index));
     }
 
@@ -60,6 +65,9 @@ public class SceneFader : MonoBehaviour
 
             case 3:
                 AkUnitySoundEngine.SetState("Scene", "Key3");
+                break;
+
+            default:
                 break;
         }
         SceneManager.LoadScene(index);

@@ -16,6 +16,8 @@ public class InteractState : PlayerState
         input.OnInteractExit += ExitInteract;
         input.OnRotatePerformed += StartRotate;
         input.OnRotateExit += ExitRotate;
+        input.OnZoomPerformed += Zoom;
+        input.OnZoomReset += ZoomReset;
 
         player.Interact.PickUpObj();
     }
@@ -24,6 +26,8 @@ public class InteractState : PlayerState
         input.OnInteractExit -= ExitInteract;
         input.OnRotatePerformed -= StartRotate;
         input.OnRotateExit -= ExitRotate;
+        input.OnZoomPerformed -= Zoom;
+        input.OnZoomReset -= ZoomReset;
 
         base.Exit();
     }
@@ -43,4 +47,8 @@ public class InteractState : PlayerState
     // TODO: inoptimal fix later
     private void StartRotate() { _isRotating = true; }
     private void ExitRotate() { _isRotating = false; }
+
+    private void Zoom(float scroll) { 
+        if (!player.Interact.IsPickingUp)   player.Camera.Zoom(scroll); }
+    private void ZoomReset() { player.Camera.ZoomReset(); }
 }

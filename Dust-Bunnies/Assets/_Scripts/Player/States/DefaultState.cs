@@ -44,7 +44,8 @@ public class DefaultState : PlayerState
 
     // DEBUG
     private void NextScene() {
-        input.Maps.Disable();           // TODO: bad practice. should not have direct access
+        Exit();
+        input.Maps.Dispose();           // TODO: bad practice. should not have direct access
         player.Debug.NextScene();
     }
 }

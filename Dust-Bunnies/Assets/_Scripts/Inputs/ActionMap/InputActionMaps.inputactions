@@ -943,12 +943,12 @@
             "actions": [
                 {
                     "name": "Zoom",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0b3bfe68-28b6-4118-8dcf-61b6b9c291af",
-                    "expectedControlType": "",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Rotate",
@@ -976,13 +976,22 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ResetZoom",
+                    "type": "Button",
+                    "id": "69cafb06-8eb5-4bf1-beac-2af43642f809",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "e958dd95-8894-450c-a36d-2454220cd2c6",
-                    "path": "",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1020,6 +1029,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "StartRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4af534e-69f3-4506-ae82-244add1ecb09",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

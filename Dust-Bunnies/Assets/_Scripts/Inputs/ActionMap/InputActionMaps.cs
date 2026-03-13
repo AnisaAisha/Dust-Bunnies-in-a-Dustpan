@@ -1029,12 +1029,12 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Zoom"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""0b3bfe68-28b6-4118-8dcf-61b6b9c291af"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Rotate"",
@@ -1062,13 +1062,22 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ResetZoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""69cafb06-8eb5-4bf1-beac-2af43642f809"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""e958dd95-8894-450c-a36d-2454220cd2c6"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1106,6 +1115,17 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""StartRotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4af534e-69f3-4506-ae82-244add1ecb09"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ResetZoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1232,6 +1252,7 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         m_Interact_Rotate = m_Interact.FindAction("Rotate", throwIfNotFound: true);
         m_Interact_Return = m_Interact.FindAction("Return", throwIfNotFound: true);
         m_Interact_StartRotate = m_Interact.FindAction("StartRotate", throwIfNotFound: true);
+        m_Interact_ResetZoom = m_Interact.FindAction("ResetZoom", throwIfNotFound: true);
         // DEBUG
         m_DEBUG = asset.FindActionMap("DEBUG", throwIfNotFound: true);
         m_DEBUG_NextScene = m_DEBUG.FindAction("NextScene", throwIfNotFound: true);
@@ -1701,6 +1722,7 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
     private readonly InputAction m_Interact_Rotate;
     private readonly InputAction m_Interact_Return;
     private readonly InputAction m_Interact_StartRotate;
+    private readonly InputAction m_Interact_ResetZoom;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interact".
     /// </summary>
@@ -1728,6 +1750,10 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interact/StartRotate".
         /// </summary>
         public InputAction @StartRotate => m_Wrapper.m_Interact_StartRotate;
+        /// <summary>
+        /// Provides access to the underlying input action "Interact/ResetZoom".
+        /// </summary>
+        public InputAction @ResetZoom => m_Wrapper.m_Interact_ResetZoom;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1766,6 +1792,9 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @StartRotate.started += instance.OnStartRotate;
             @StartRotate.performed += instance.OnStartRotate;
             @StartRotate.canceled += instance.OnStartRotate;
+            @ResetZoom.started += instance.OnResetZoom;
+            @ResetZoom.performed += instance.OnResetZoom;
+            @ResetZoom.canceled += instance.OnResetZoom;
         }
 
         /// <summary>
@@ -1789,6 +1818,9 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @StartRotate.started -= instance.OnStartRotate;
             @StartRotate.performed -= instance.OnStartRotate;
             @StartRotate.canceled -= instance.OnStartRotate;
+            @ResetZoom.started -= instance.OnResetZoom;
+            @ResetZoom.performed -= instance.OnResetZoom;
+            @ResetZoom.canceled -= instance.OnResetZoom;
         }
 
         /// <summary>
@@ -2167,6 +2199,13 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnStartRotate(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ResetZoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnResetZoom(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "DEBUG" which allows adding and removing callbacks.
