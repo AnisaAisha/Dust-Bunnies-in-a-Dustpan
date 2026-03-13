@@ -16,4 +16,6 @@ public class Interactable : MonoBehaviour
         _startRot = transform.rotation;
     }
 
+    public virtual void OnPickUp() { }
+    public virtual void OnPutDown() { }
 }

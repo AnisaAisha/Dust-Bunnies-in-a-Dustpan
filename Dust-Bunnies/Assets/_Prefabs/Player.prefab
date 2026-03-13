@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camHead: {fileID: 7403470775012371508}
-  cam: {fileID: 0}
+  cam: {fileID: 3209397138489094211}
   rotationSpeed: 0.05
   lookSmoothing: 20
   freeReturnTweenDuration: 1
