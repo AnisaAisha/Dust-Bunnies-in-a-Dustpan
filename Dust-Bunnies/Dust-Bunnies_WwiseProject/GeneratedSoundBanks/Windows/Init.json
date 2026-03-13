@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{B4FC667F-1B44-ED30-3DE2-957ACFAD81AF}",
+    "Hash": "{247FDC41-477A-47D0-8149-CA6F90C07936}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "914620648",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep\\[Effect Slot [1]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{1ABA9249-DA21-497C-8680-5BA32C0E1CA2}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
       {
        "Id": "2901166873",
@@ -84,6 +94,11 @@
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep",
       "GUID": "{1657EC3F-4A0A-467A-8030-25A934241F4E}",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "914620648"
+        }
+       ],
        "ShareSets": [
         {
          "Id": "2901166873"
@@ -119,6 +134,54 @@
       }
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "2460978563",
+      "Name": "CandlePan",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\CandlePan",
+      "GUID": "{68674527-2BB2-460D-A004-80EF02439885}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1926883983",
+      "Name": "Scene",
+      "ObjectPath": "\\States\\Default Work Unit\\Scene",
+      "GUID": "{1A0AE10D-819B-4A64-B3EF-1520E4882B35}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\None",
+        "GUID": "{02F067A0-7CB0-4A49-B405-334823B1C81D}"
+       },
+       {
+        "Id": "2039020852",
+        "Name": "Mirror",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Mirror",
+        "GUID": "{ABEBC7D1-1837-4AB9-A416-C9E9978EABAE}"
+       },
+       {
+        "Id": "2215982740",
+        "Name": "Key2",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key2",
+        "GUID": "{612E8A23-6F89-410B-AC5E-A361DA2F94F1}"
+       },
+       {
+        "Id": "2215982741",
+        "Name": "Key3",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key3",
+        "GUID": "{18EC95FA-CA7E-4786-8045-181894FD06F3}"
+       },
+       {
+        "Id": "2215982743",
+        "Name": "Key1",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key1",
+        "GUID": "{46832612-5A3D-444B-B82C-5BFBA296169F}"
+       }
+      ]
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "3989786198",
@@ -143,6 +206,6 @@
     ]
    }
   ],
-  "FileHash": "{839FEDF4-E1BB-AA15-B507-D2F42CDE3479}"
+  "FileHash": "{C3689404-7D33-BFF1-5EC8-3BF124663961}"
  }
 }
