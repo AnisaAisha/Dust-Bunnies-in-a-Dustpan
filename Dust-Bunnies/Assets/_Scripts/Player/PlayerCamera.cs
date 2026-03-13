@@ -1,5 +1,6 @@
 using PrimeTween;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Dynamic Camera for player movement
@@ -7,7 +8,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     [SerializeField] private Transform camHead;
-    [SerializeField] private Camera playerCamera;
+    [SerializeField] private Camera cam;
 
     [Header("Free Look Settings")]
     [SerializeField] private float rotationSpeed = 2f;
@@ -27,6 +28,10 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float lookAroundSideOffset = 0.2f;
     [SerializeField] private float lookAroundFOVReduction = 5f;
     [SerializeField] private float lookAroundTweenDuration = 0.5f;
+
+    [Header("Zoom Settings")]
+    [SerializeField] private float minFOV = 15f;
+    [SerializeField] private float zoomSpeed = 10f;
 
     enum CamState {
         Free,
@@ -52,7 +57,7 @@ public class PlayerCamera : MonoBehaviour
         overheadCamLocalPos = originalCamLocalPos + new Vector3(0, 0, overheadForwardOffset);
         lookAroundLeftCamLocalPos = originalCamLocalPos + new Vector3(-lookAroundSideOffset, 0, 0);
         lookAroundRightCamLocalPos = originalCamLocalPos + new Vector3(lookAroundSideOffset, 0, 0);
-        originalFOV = playerCamera.fieldOfView;
+        originalFOV = cam.fieldOfView;
     }
 
     // Rn this is getting called from the player default state but im not sure if that's correct - Jazz
@@ -72,6 +77,21 @@ public class PlayerCamera : MonoBehaviour
                 || (Input.GetKeyUp(KeyCode.E) && currentCamState == CamState.LockedLookAroundRight)) {
             SetCamStateReturnFree();
         }
+    }
+
+    /// <summary>
+    /// When the player interacts they can zoom in on objects
+    /// </summary>
+    public void Zoom(float scroll) {
+        float newFOV = cam.fieldOfView - scroll * zoomSpeed;
+        cam.fieldOfView = Mathf.Clamp(newFOV, minFOV, originalFOV);
+    }
+
+    /// <summary>
+    /// Reset camera to default FOV
+    /// </summary>
+    public void ZoomReset() {
+        cam.fieldOfView = originalFOV;
     }
 
     void OnTriggerStay(Collider other) {
@@ -129,7 +149,7 @@ public class PlayerCamera : MonoBehaviour
         Sequence.Create()
             .Group(Tween.LocalPosition(camHead, overheadCamLocalPos, duration: overheadTweenDuration, ease: Ease.InOutQuad))
             .Group(TweenCamRotationX(overheadDownAngle, duration: overheadTweenDuration, ease: Ease.InOutQuad))
-            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV - overheadFOVReduction, duration: overheadTweenDuration, ease: Ease.Linear));
+            .Group(Tween.CameraFieldOfView(cam, originalFOV - overheadFOVReduction, duration: overheadTweenDuration, ease: Ease.Linear));
     }
 
     private void CamReturnFree() {
@@ -137,7 +157,7 @@ public class PlayerCamera : MonoBehaviour
             .Group(Tween.LocalPosition(camHead, originalCamLocalPos, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
             .Group(TweenCamRotationX(0f, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
             .Group(TweenCamRotationZ(0f, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
-            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV, duration: freeReturnTweenDuration, ease: Ease.Linear))
+            .Group(Tween.CameraFieldOfView(cam, originalFOV, duration: freeReturnTweenDuration, ease: Ease.Linear))
             .OnComplete(target: this, target => target.SetCamStateFree());
     }
 
@@ -149,7 +169,7 @@ public class PlayerCamera : MonoBehaviour
             .Group(TweenCamRotationX(0, duration: lookAroundTweenDuration, ease: Ease.InOutQuad))
             .Group(TweenCamRotationZ(currentCamState == CamState.LockedLookAroundLeft ? lookAroundTiltAngle : -lookAroundTiltAngle,
                 duration: lookAroundTweenDuration, ease: Ease.InOutQuad))
-            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV - lookAroundFOVReduction, duration: lookAroundTweenDuration, ease: Ease.Linear));
+            .Group(Tween.CameraFieldOfView(cam, originalFOV - lookAroundFOVReduction, duration: lookAroundTweenDuration, ease: Ease.Linear));
     }
 
 

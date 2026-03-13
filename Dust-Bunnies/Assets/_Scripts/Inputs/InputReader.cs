@@ -20,6 +20,8 @@ public class InputReader : MonoBehaviour
     public event System.Action OnInteractExit;
     public event System.Action OnRotatePerformed;
     public event System.Action OnRotateExit;
+    public event System.Action<float> OnZoomPerformed;
+    public event System.Action OnZoomReset;
 
     // DEBUG
     public event System.Action OnNextScenePerformed;
@@ -37,6 +39,8 @@ public class InputReader : MonoBehaviour
         _inputs.Interact.Return.performed += InteractExitPerformed;
         _inputs.Interact.StartRotate.performed += RotatePerformed;
         _inputs.Interact.StartRotate.canceled += RotatePerformed;
+        _inputs.Interact.Zoom.performed += ZoomPerformed;
+        _inputs.Interact.ResetZoom.performed += ZoomReset;
 
         // DEBUG
         _inputs.DEBUG.NextScene.performed += NextScenePerformed;
@@ -47,6 +51,8 @@ public class InputReader : MonoBehaviour
         _inputs.Interact.Return.performed -= InteractExitPerformed;
         _inputs.Interact.StartRotate.performed -= RotatePerformed;
         _inputs.Interact.StartRotate.canceled -= RotatePerformed;
+        _inputs.Interact.Zoom.performed -= ZoomPerformed;
+        _inputs.Interact.ResetZoom.performed -= ZoomReset;
 
         // DEBUG
         _inputs.DEBUG.NextScene.performed -= NextScenePerformed;
@@ -80,6 +86,11 @@ public class InputReader : MonoBehaviour
         else if (context.canceled) OnRotateExit?.Invoke();
     }
 
+    private void ZoomPerformed(InputAction.CallbackContext context) =>
+        OnZoomPerformed?.Invoke(context.ReadValue<float>());
+
+    private void ZoomReset(InputAction.CallbackContext _) =>
+        OnZoomReset?.Invoke();
     private void NextScenePerformed(InputAction.CallbackContext _) =>
         OnNextScenePerformed?.Invoke();
 }
