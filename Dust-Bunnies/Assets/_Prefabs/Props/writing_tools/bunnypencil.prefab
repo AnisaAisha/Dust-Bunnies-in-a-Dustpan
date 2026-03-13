@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3827363236508977598}
   - component: {fileID: 194319991138338331}
   - component: {fileID: 2690525059899863761}
+  - component: {fileID: 756478167397228368}
+  - component: {fileID: 6756511204992485906}
   m_Layer: 0
   m_Name: bunnypencil
   m_TagString: Untagged
@@ -90,3 +92,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &756478167397228368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491872482238763780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8df32e4a6d7524c929cdb7d419ddf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6756511204992485906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491872482238763780}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01751528, y: 0.013265692, z: 0.2347197}
+  m_Center: {x: -0.0005912236, y: 0.00633551, z: -0.004705634}
