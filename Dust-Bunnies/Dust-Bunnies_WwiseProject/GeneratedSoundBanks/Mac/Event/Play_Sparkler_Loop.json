@@ -1,0 +1,103 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3667990691",
+    "Type": "Event",
+    "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
+    "Language": "SFX",
+    "Hash": "{11D4F9EC-FA35-E005-EBBF-6303132B83BB}",
+    "ObjectPath": "Play_Sparkler_Loop",
+    "ShortName": "Play_Sparkler_Loop",
+    "Path": "Event/Play_Sparkler_Loop.bnk",
+    "Media": [
+     {
+      "Id": "84853155",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_02.wav",
+      "Path": "Media/84853155.wem",
+      "CachePath": "22/{224DE3CA-9039-C1F6-0A0E-0C9B33875C47}.wem"
+     },
+     {
+      "Id": "239558737",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_03.wav",
+      "Path": "Media/239558737.wem",
+      "CachePath": "71/{71D4E7C7-6042-F086-07A3-EF30CCBDF55D}.wem"
+     },
+     {
+      "Id": "382901388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_04.wav",
+      "Path": "Media/382901388.wem",
+      "CachePath": "73/{73BF67B5-1852-ED32-1FE3-1012F8798F22}.wem"
+     },
+     {
+      "Id": "711784518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_05.wav",
+      "Path": "Media/711784518.wem",
+      "CachePath": "7A/{7A558F95-35D8-F969-A98A-E765AE984960}.wem"
+     },
+     {
+      "Id": "860186292",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_01.wav",
+      "Path": "Media/860186292.wem",
+      "CachePath": "33/{3387991F-4E69-F359-9E5E-AFE1965462DC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3667990691",
+      "Name": "Play_Sparkler_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Sparkler_Loop",
+      "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
+      "Color": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "84853155"
+       },
+       {
+        "Id": "239558737"
+       },
+       {
+        "Id": "382901388"
+       },
+       {
+        "Id": "711784518"
+       },
+       {
+        "Id": "860186292"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2460978563",
+      "Name": "CandlePan",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\CandlePan",
+      "GUID": "{68674527-2BB2-460D-A004-80EF02439885}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3E618879-52A8-3C2E-43DF-985DA7ACE0C5}"
+ }
+}
