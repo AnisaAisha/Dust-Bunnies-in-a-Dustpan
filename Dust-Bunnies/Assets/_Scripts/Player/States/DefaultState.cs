@@ -36,10 +36,15 @@ public class DefaultState : PlayerState
     }
 
     private void OnInteract() {
-        Interactable obj = player.Interact.TryPickUp();
+        Interactable obj = player.Interact.TryInteract();
         if (obj == null) return;
 
-        player.SwitchState(new InteractState(player, input));
+        // switch state if you can
+        PlayerState state = obj.GetNextState(player, input);
+        if (state == null) return;
+
+        player.SwitchState(state);
+        // player.SwitchState(new InteractState(player, input));
     }
 
     // DEBUG
