@@ -3,9 +3,9 @@ using UnityEngine;
 /// <summary>
 /// When the player picks up an object
 /// </summary>
-public class InteractState : PlayerState
+public class PickUpState : PlayerState
 {
-    public InteractState(PlayerController p, InputReader i) : base(p, i) { }
+    public PickUpState(PlayerController p, InputReader i) : base(p, i) { }
 
     private bool _isRotating = false;
 

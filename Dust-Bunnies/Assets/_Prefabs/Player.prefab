@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 8229941468812729047}
-  hold_point: {fileID: 3108348115123272139}
+  holdPoint: {fileID: 3108348115123272139}
   moveTime: 1
   rotationSpeed: 0.5
   pickUpDistance: 1

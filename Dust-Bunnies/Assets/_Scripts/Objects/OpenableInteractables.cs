@@ -2,10 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using PrimeTween;
 
+/// <summary>
+/// Objects like doors, drawers, and the like
+/// </summary>
 public class OpenableInteractables: Interactable
 {
-    public enum InteractableState
-    {
+    public enum InteractableState {
         Open,
         Closed
     }
@@ -15,24 +17,25 @@ public class OpenableInteractables: Interactable
     Vector3 originalPosition;
     
 
-    void Start()
-    {
+    void Start() {
         state = InteractableState.Closed;
         originalPosition = transform.position;
 
         containsObjects = objectsInDrawer.Count > 0;
 
         // Check if we have a list of objects that will be in drawer
-        foreach (GameObject go in objectsInDrawer)
-        {
+        foreach (GameObject go in objectsInDrawer) {
             go.transform.parent = transform;
         }
     }
 
-    InteractableState GetCurrentState()
-    {
-        return state;
+    public override void Interact(Vector3 holdPoint, Vector3 playerCam, float moveTime) {
+        base.Interact(holdPoint, playerCam, moveTime);
+        Debug.Log("rat");
+        ChangeState();
     }
+
+    InteractableState GetCurrentState() { return state; }
 
     // Possible improvement: Make the factor public? because everything will probably not use +1/-1 factor
     public void ChangeState()
