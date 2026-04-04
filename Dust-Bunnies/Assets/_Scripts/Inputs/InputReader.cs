@@ -62,12 +62,18 @@ public class InputReader : MonoBehaviour
 
     public void SwitchMaps(InputActionMap newMap) {
         // DEBUG --
-        if (currentMap != null) {
-            if (currentMap.name == "Default")
-                Maps.DEBUG.Disable();
-        } else if (newMap.name == "Default") {
+        if (newMap.name == "Default") {
             Maps.DEBUG.Enable();
+        } else {
+            Maps.DEBUG.Disable();
         }
+
+        //if (currentMap != null) {
+        //    if (currentMap.name == "Default")
+        //        Maps.DEBUG.Disable();
+        //} else if (newMap.name == "Default") {
+        //    Maps.DEBUG.Enable();
+        //}
             
 
         currentMap?.Disable();

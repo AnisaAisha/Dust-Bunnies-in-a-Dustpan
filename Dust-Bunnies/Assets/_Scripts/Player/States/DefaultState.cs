@@ -50,7 +50,7 @@ public class DefaultState : PlayerState
     // DEBUG
     private void NextScene() {
         Exit();
-        input.Maps.Dispose();           // TODO: bad practice. should not have direct access
+        //input.Maps.Dispose();           // TODO: bad practice. should not have direct access
         player.Debug.NextScene();
     }
 }
