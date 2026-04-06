@@ -67,15 +67,7 @@ public class InputReader : MonoBehaviour
         } else {
             Maps.DEBUG.Disable();
         }
-
-        //if (currentMap != null) {
-        //    if (currentMap.name == "Default")
-        //        Maps.DEBUG.Disable();
-        //} else if (newMap.name == "Default") {
-        //    Maps.DEBUG.Enable();
-        //}
             
-
         currentMap?.Disable();
         currentMap = newMap;
         currentMap.Enable();

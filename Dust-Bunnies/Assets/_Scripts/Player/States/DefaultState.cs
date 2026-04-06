@@ -36,7 +36,7 @@ public class DefaultState : PlayerState
     }
 
     private void OnInteract() {
-        Interactable obj = player.Interact.TryInteract();
+        Interactable obj = player.Interact.TryInteract(player.MyCollider);
         if (obj == null) return;
 
         // switch state if you can

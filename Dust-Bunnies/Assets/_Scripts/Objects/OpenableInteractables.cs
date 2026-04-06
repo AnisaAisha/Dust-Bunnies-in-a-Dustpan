@@ -29,9 +29,8 @@ public class OpenableInteractables: Interactable
         }
     }
 
-    public override void Interact(Vector3 holdPoint, Vector3 playerCam, float moveTime) {
-        base.Interact(holdPoint, playerCam, moveTime);
-        Debug.Log("rat");
+    public override void Interact(Transform playerCam, float moveTime) {
+        base.Interact(playerCam, moveTime);
         ChangeState();
     }
 

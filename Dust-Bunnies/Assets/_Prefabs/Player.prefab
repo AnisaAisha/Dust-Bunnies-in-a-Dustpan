@@ -185,6 +185,7 @@ MonoBehaviour:
   motor: {fileID: 5661372990698979659}
   interact: {fileID: 2082595037845713553}
   cam: {fileID: 692960134869052235}
+  myCollider: {fileID: 8189818858799356806}
   debug: {fileID: 4526735801422010663}
 --- !u!114 &5661372990698979659
 MonoBehaviour:
@@ -217,7 +218,7 @@ MonoBehaviour:
   holdPoint: {fileID: 3108348115123272139}
   moveTime: 1
   rotationSpeed: 0.5
-  pickUpDistance: 1
+  pickUpDistance: 5
 --- !u!114 &692960134869052235
 MonoBehaviour:
   m_ObjectHideFlags: 0

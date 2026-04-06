@@ -25,17 +25,22 @@ public class PlayerInteract : MonoBehaviour
     /// <summary>
     /// Called when the player hits the interact button
     /// </summary>
-    public Interactable TryInteract() {
+    public Interactable TryInteract(Collider collider) {
         // shoot ray from the center of camera
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (Physics.Raycast(ray, out RaycastHit hit, pickUpDistance)) {
+
+        collider.enabled = false;       // disable collider on self when querying hit object
+        bool hitObject = Physics.Raycast(ray, out RaycastHit hit, pickUpDistance);
+        collider.enabled = true;
+
+        if (hitObject) {
             if (hit.transform.TryGetComponent(out Interactable interactable)) {
                 Interactable obj = interactable;
                 _interactedObject = obj;
 
                 // TODO: TEST interact here
                 if (obj != null) {
-                    _interactedObject.Interact(holdPoint.position, playerCam.position, moveTime);
+                    _interactedObject.Interact(playerCam, moveTime);
                 }
 
                 return obj;
@@ -70,7 +75,6 @@ public class PlayerInteract : MonoBehaviour
     }
 
     public void Rotate(Vector2 rot) {
-        Debug.Log("rot");
         Transform t = _interactedObject.transform;
         t.Rotate(playerCam.up ,-rot.x * rotationSpeed, Space.World);
         t.Rotate(playerCam.right, - rot.y * rotationSpeed, Space.World);
