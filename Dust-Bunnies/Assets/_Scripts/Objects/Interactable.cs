@@ -8,7 +8,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     // TODO: temp to make the system work again then revisit a better way to pass info
-    public virtual void Interact(Vector3 holdPoint, Vector3 playerCam, float moveTime) { }
+    public virtual void Interact(Transform playerCam, float moveTime) { }
 
     public virtual void InteractEnd(float moveTime) { }
 

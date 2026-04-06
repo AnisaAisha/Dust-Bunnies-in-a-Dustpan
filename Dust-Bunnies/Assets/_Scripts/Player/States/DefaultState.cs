@@ -36,7 +36,7 @@ public class DefaultState : PlayerState
     }
 
     private void OnInteract() {
-        Interactable obj = player.Interact.TryInteract();
+        Interactable obj = player.Interact.TryInteract(player.MyCollider);
         if (obj == null) return;
 
         // switch state if you can
@@ -50,7 +50,7 @@ public class DefaultState : PlayerState
     // DEBUG
     private void NextScene() {
         Exit();
-        input.Maps.Dispose();           // TODO: bad practice. should not have direct access
+        //input.Maps.Dispose();           // TODO: bad practice. should not have direct access
         player.Debug.NextScene();
     }
 }

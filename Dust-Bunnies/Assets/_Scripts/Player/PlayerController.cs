@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement motor;
     [SerializeField] private PlayerInteract interact;
     [SerializeField] private PlayerCamera cam;
+    [SerializeField] private Collider myCollider;
 
     [SerializeField] private PlayerDEBUG debug;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public PlayerCamera Camera => cam;
     public PlayerInteract Interact => interact;
     public PlayerDEBUG Debug => debug;
+    public Collider MyCollider => myCollider;
 
     private PlayerState _currentState;
 
