@@ -3,7 +3,22 @@ guid: 75c77e5d7519a934a9c8277fa7da89b0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: felt
+    second: {fileID: 2100000, guid: 7e267312ae5620c4c94f143ecd9e2a48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 196219e855ad4a24ba88d15cb5a641f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic
+    second: {fileID: 2100000, guid: 6f72360bac8b3974bb8b2d4e2f66ab4d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

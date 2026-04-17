@@ -47,7 +47,7 @@ MonoBehaviour:
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
-  m_DepthPrimingMode: 2
+  m_DepthPrimingMode: 0
   m_CopyDepthMode: 0
   m_DepthAttachmentFormat: 0
   m_DepthTextureFormat: 0
@@ -95,8 +95,8 @@ MonoBehaviour:
   settings:
     downsampling: 1
     stage: 2
-    intensity: 2.1
-    scattering: -0.02
+    intensity: 2.69
+    scattering: -0.81
     steps: 24
     maxDistance: 25
     jitter: 250

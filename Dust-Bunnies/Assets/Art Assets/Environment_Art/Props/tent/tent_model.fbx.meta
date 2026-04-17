@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: drapes.001
     second: {fileID: 2100000, guid: 005576c3452f2054abb9c110fc3a96dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pink_cloth
+    second: {fileID: 2100000, guid: 49b556d89b4260c458de4c8134e6a9ea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
