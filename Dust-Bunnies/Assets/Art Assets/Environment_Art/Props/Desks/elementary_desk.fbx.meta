@@ -3,22 +3,7 @@ guid: bfe11dbddee4d764eaa422d329c0b72d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outline_shader
-    second: {fileID: 2100000, guid: 17e3afce38c46664098b56f63634af27, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: white_panels
-    second: {fileID: 2100000, guid: 714b577c43179b549a6a417cab838470, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wood
-    second: {fileID: 2100000, guid: b6a81517b9846d445ad7e595f7fdb509, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

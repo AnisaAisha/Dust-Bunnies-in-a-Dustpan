@@ -3,17 +3,7 @@ guid: bc91871f844943347ba1b1515aa96c42
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outline_shader.001
-    second: {fileID: 2100000, guid: e511fe81e65c1364ba1b8d2d11908abc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: water_color_shader.001
-    second: {fileID: 2100000, guid: 10d85b1fcb174df4e92fd2e0d7b92fba, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

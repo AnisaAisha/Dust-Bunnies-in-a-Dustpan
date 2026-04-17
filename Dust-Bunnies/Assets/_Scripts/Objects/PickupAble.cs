@@ -59,7 +59,7 @@ public class PickupAble : Interactable
         Tween.Position(t, holdPoint, moveTime, Ease.InSine);    // move to player hold point
 
         // calculate rotation to point towards player cam
-        Quaternion rot = Quaternion.LookRotation(playerCam.position - t.position, Vector3.up);
+        Quaternion rot = Quaternion.LookRotation(t.position - playerCam.position, Vector3.up);
         Tween.Rotation(t, rot, moveTime, Ease.InSine);
 
         yield return new WaitForSeconds(moveTime);
