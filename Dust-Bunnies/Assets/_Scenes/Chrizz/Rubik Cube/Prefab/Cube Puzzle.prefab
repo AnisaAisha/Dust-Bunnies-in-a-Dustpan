@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8869833555416880315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3415658929815530016}
+  - component: {fileID: 7281317345151483098}
+  m_Layer: 0
+  m_Name: Cube Puzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3415658929815530016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869833555416880315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.579, y: 1.446, z: -4.568}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8547019330442578679}
+  - {fileID: 8673136830550506128}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7281317345151483098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869833555416880315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0895d018e46595341a96d98b5f07c629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configToggleKey: 32
+  easyPuzzle: {fileID: 8547019330442578679}
+  hardPuzzle: {fileID: 8673136830550506128}
+--- !u!1001 &1057378922435713498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3415658929815530016}
+    m_Modifications:
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9709901
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.23911959
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -27.669
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206302480374990504, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+      propertyPath: m_Name
+      value: Rubik Cube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+--- !u!4 &8547019330442578679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8660857812691800877, guid: 1a8ff198c2edbce4bb810d84e6d396b1, type: 3}
+  m_PrefabInstance: {fileID: 1057378922435713498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4353795391498430767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3415658929815530016}
+    m_Modifications:
+    - target: {fileID: 1318223179810173264, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_Name
+      value: Ray's Rubik Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318223179810173264, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.117
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9709901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.23911959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -27.669
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518102868965437220, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+      propertyPath: scrambleMoves
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+--- !u!4 &8673136830550506128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4915364711587828671, guid: 3f9f27c9791038c4699abffc87492568, type: 3}
+  m_PrefabInstance: {fileID: 4353795391498430767}
+  m_PrefabAsset: {fileID: 0}
