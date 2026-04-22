@@ -5,17 +5,16 @@ using UnityEngine;
 /// 
 /// Base class for all interactable objects
 /// </summary>
+[RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
     public string Dialogue = null;
     // TODO: temp to make the system work again then revisit a better way to pass info
     public virtual void Interact(Transform playerCam, float moveTime) {
-        try
-        {
+        try {
             DialogueManager.Instance.RunDialogue(Dialogue);
         }
-        catch
-        {
+        catch {
             Debug.LogWarning("Dialogue manager instance does not exist");
         }
     }

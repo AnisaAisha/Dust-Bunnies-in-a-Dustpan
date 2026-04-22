@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneFader : MonoBehaviour
 {
@@ -22,11 +23,10 @@ public class SceneFader : MonoBehaviour
         // TODO: bootstrapped
         //if (index > SceneManager.sceneCount) { index = 0; }
 
-        StartCoroutine(FadeOut(index));
+        StartCoroutine(FadeToScene(index));
     }
 
-    IEnumerator FadeIn()
-    {
+    public IEnumerator FadeIn() {
         float t = fadeTime;
 
         while (t > 0)
@@ -38,8 +38,18 @@ public class SceneFader : MonoBehaviour
         }
     }
 
-    IEnumerator FadeOut(int index)
-    {
+    public IEnumerator FadeOut() {
+        float t = 0f;    // time
+
+        while (t < fadeTime) {
+            t += Time.deltaTime;
+            float a = curve.Evaluate(t);
+            img.color = new Color(0f, 0f, 0f, t);
+            yield return 0;         // wait a frame and then continue
+        }
+    }
+
+    IEnumerator FadeToScene(int index) {
         float t = 0f;    // time
 
         while (t < fadeTime)
@@ -72,6 +82,4 @@ public class SceneFader : MonoBehaviour
         }
         SceneManager.LoadScene(index);
     }
-
-
 }

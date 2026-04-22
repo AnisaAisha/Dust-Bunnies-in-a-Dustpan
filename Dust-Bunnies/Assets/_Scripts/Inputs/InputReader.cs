@@ -16,6 +16,7 @@ public class InputReader : MonoBehaviour
     // sprint
 
     // EVENTS   ---
+    public event System.Action OnSprintPerformed;
     public event System.Action OnInteractPerformed;
     public event System.Action OnInteractExit;
     public event System.Action OnRotatePerformed;
@@ -35,6 +36,7 @@ public class InputReader : MonoBehaviour
     }
 
     void OnEnable() {
+        _inputs.Default.Sprint.performed += SprintPerformed;
         _inputs.Default.Interact.performed += InteractPerformed;
         _inputs.Interact.Return.performed += InteractExitPerformed;
         _inputs.Interact.StartRotate.performed += RotatePerformed;
@@ -87,6 +89,9 @@ public class InputReader : MonoBehaviour
         currentMap = newMap;
         currentMap.Enable();
     }
+
+    private void SprintPerformed(InputAction.CallbackContext _) =>
+        OnSprintPerformed?.Invoke();
 
     private void InteractPerformed(InputAction.CallbackContext _) => 
         OnInteractPerformed?.Invoke();
