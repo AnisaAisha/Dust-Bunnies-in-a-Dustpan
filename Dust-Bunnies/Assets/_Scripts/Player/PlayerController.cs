@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInteract interact;
     [SerializeField] private PlayerCamera cam;
     [SerializeField] private Collider myCollider;
+    [SerializeField] private GameObject crosshair;
 
     [SerializeField] private PlayerDEBUG debug;
 
@@ -37,4 +38,7 @@ public class PlayerController : MonoBehaviour
     void Update() {
         _currentState?.Update();
     }
+
+    public void EnableCrosshair() => crosshair.SetActive(true);
+    public void DisableCrosshair() => crosshair.SetActive(false);
 }
