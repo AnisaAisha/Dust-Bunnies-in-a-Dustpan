@@ -5,12 +5,14 @@ using UnityEngine.UI;
 public class Mirror : Interactable
 {
     [SerializeField] private SceneFader sceneFader;
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Camera playerCam;
     [SerializeField] private Camera mirrorCam;
     [SerializeField] private Image reflection;
 
     void Start() {
-        reflection.enabled = false; 
+        reflection.enabled = false;
+        mirrorCam.enabled = false;
     }
 
     public override void Interact(Transform playerCam, float moveTime) {
@@ -33,12 +35,16 @@ public class Mirror : Interactable
 
         yield return new WaitForSeconds(0.5f);
 
-        // disable player cam, activate mirror cam
-        playerCam.enabled = false;
+        playerCam.enabled = false;  // switch cams
         mirrorCam.enabled = true;
-        reflection.enabled = true;
-        // load the image of cici reflection
+        reflection.enabled = true;  // load image of cici reflection
 
         StartCoroutine(sceneFader.FadeIn());
+
+        yield return new WaitForSeconds(1f);
+        dialogueManager.RunDialogue("Alright, let's get to work.");
+        yield return new WaitForSeconds(4f);
+
+        sceneFader.FadeTo(1);   // TODO: x__x
     }
 }
