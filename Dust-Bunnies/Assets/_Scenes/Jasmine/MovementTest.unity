@@ -4563,7 +4563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7ec0bf29d46cb4cb0987c135d36daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: 
 --- !u!4 &1514824327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5123509180837823667, guid: aca59c0f8a0a1f64d9a5852de77a2f6d, type: 3}
@@ -11573,104 +11572,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].time
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].time
-      value: 0.69677
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[3].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].value
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].value
-      value: 0.013886392
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[3].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].inSlope
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].inSlope
-      value: -0.051553886
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[3].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].outSlope
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].outSlope
-      value: -0.051553886
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[3].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[1].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
-      propertyPath: accelerationCurve.m_Curve.Array.data[2].tangentMode
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6073944056012419622, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12038,7 +11953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7ec0bf29d46cb4cb0987c135d36daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: 
 --- !u!1001 &7034849828066857821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12279,7 +12193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7ec0bf29d46cb4cb0987c135d36daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: 
 --- !u!1001 &7294783841395707081
 PrefabInstance:
   m_ObjectHideFlags: 0
