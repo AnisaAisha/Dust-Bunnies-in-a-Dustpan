@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement motor;
     [SerializeField] private PlayerInteract interact;
     [SerializeField] private PlayerCamera cam;
+    [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private Collider myCollider;
     [SerializeField] private GameObject crosshair;
 
