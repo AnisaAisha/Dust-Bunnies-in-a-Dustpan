@@ -36,6 +36,12 @@ public class SnapshotUIScript : MonoBehaviour
             Debug.Log(numberpos[i]);
         }
         Expand();
+
+
+        // Edits - Jazz man
+        GameManager.OnLoadNextSnapshot += AdvanceSnapshot;
+        snapshot = GameManager.CurrentSnapshotNumber;
+        UpdateSnapshotUI();
     }
 
     // Update is called once per frame
@@ -170,7 +176,9 @@ public class SnapshotUIScript : MonoBehaviour
         }
         direction = 1;
         Expand();
-        
+
+        // EDITS: jazz man
+        GameManager.OnLoadNextSnapshot -= AdvanceSnapshot;
     }
     public void DecrementSnapshot()
     {
@@ -194,6 +202,28 @@ public class SnapshotUIScript : MonoBehaviour
         }
         Expand();
     }
+
+    private void UpdateSnapshotUI() {
+        seasontext.text = seasons[snapshot];
+        agetext.text = "" + age[snapshot];
+
+        // Update arrows
+        backward.enabled = snapshot != 0;
+        forward.enabled = snapshot != seasons.Count - 1;
+
+        // Update number strip
+        for (int i = 0; i < numbers.Count; i++) {
+            int value = snapshot - 2 + i;
+
+            if (value < 0 || value >= seasons.Count) {
+                numbers[i].text = "";
+            }
+            else {
+                numbers[i].text = value.ToString();
+            }
+        }
+    }
+
     IEnumerator WaitCompress()
     {
         yield return new WaitForSeconds(2.5f);
