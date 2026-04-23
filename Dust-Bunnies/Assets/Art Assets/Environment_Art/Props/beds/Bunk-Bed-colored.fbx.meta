@@ -7,38 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.Wire
-    second: {fileID: 2100000, guid: e7bae566a24161d41863604b04b825d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: outline_shader
-    second: {fileID: 2100000, guid: a4e66119b0181ab4a9f38d28c96185a3, type: 2}
+    second: {fileID: 2100000, guid: e511fe81e65c1364ba1b8d2d11908abc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: water_color_shader.Pillow
-    second: {fileID: 2100000, guid: 542abe14b45cfbe4a8e4f50bbcbd2714, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: water_color_shader.frame
-    second: {fileID: 2100000, guid: 91af9738f87f30441ac8151c6ba30d65, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: water_color_shader.light
-    second: {fileID: 2100000, guid: ff1d55a7d1f96e34a9272ea620629401, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: water_color_shader.mattress
-    second: {fileID: 2100000, guid: 2b2acf5bfc072c44d84f4a9a47e82f30, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: water_color_shader_Blanket
-    second: {fileID: 2100000, guid: c099e711b20e8da418c3ff428a9cc6c9, type: 2}
+      name: outline_shader.001
+    second: {fileID: 2100000, guid: 5ad9ea5c94c803149b43fc7017e5b93d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
