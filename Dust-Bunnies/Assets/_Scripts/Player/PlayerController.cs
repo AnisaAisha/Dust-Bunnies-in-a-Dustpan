@@ -23,9 +23,18 @@ public class PlayerController : MonoBehaviour
 
     private PlayerState _currentState;
 
+    //void Awake() {
+    //    PlayerInit();
+    //}
+
     void Start() {
+        PlayerInit();       // TODO: not good here
         // begin the game in default state
         SwitchState(new DefaultState(this, input));
+    }
+
+    private void PlayerInit() {
+        GameManager.Player = this;
     }
 
     // TODO: check this later
@@ -41,4 +50,7 @@ public class PlayerController : MonoBehaviour
 
     public void EnableCrosshair() => crosshair.SetActive(true);
     public void DisableCrosshair() => crosshair.SetActive(false);
+
+
+    // TODO: seperate this eventually into a scene loader class that sends an event to store these coords
 }

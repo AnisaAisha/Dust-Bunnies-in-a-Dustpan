@@ -260,11 +260,13 @@ MonoBehaviour:
   baseObject: {fileID: 171699624}
   bodyAnchor: {fileID: 577991997}
   stateConfigurations:
-  - {swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}, swapBody: {fileID: 1596267684}}
-  - {swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}, swapBody: {fileID: 29697195}}
-  - {swapState: {fileID: 11400000, guid: 50150d38f89481c43a83b0f1e519f0fa, type: 2}, swapBody: {fileID: 2018925896}}
+  - swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}
+    swapBody: {fileID: 1596267684}
+  - swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}
+    swapBody: {fileID: 29697195}
+  - swapState: {fileID: 11400000, guid: 50150d38f89481c43a83b0f1e519f0fa, type: 2}
+    swapBody: {fileID: 2018925896}
   prewarmStates: 1
-  currentState: {fileID: 0}
 --- !u!4 &171699623
 Transform:
   m_ObjectHideFlags: 0
@@ -359,6 +361,77 @@ Transform:
   - {fileID: 669754493}
   - {fileID: 2052325869}
   m_Father: {fileID: 1973970621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &355946052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355946055}
+  - component: {fileID: 355946054}
+  - component: {fileID: 355946053}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &355946053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355946052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitBank: {fileID: 0}
+--- !u!114 &355946054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355946052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a51e05e58ac964591cd614764097eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: a8f02c3b05d7f9047b0e6c62201d6bcf, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &355946055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355946052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &577991996
 GameObject:
@@ -788,8 +861,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1228689425}
   - component: {fileID: 1228689424}
-  - component: {fileID: 1228689423}
   - component: {fileID: 1228689426}
+  - component: {fileID: 1228689428}
+  - component: {fileID: 1228689427}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -797,14 +871,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1228689423
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228689422}
-  m_Enabled: 1
 --- !u!20 &1228689424
 Camera:
   m_ObjectHideFlags: 0
@@ -915,6 +981,46 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1228689427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228689422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b349e20edce8e40952453cd8869e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &1228689428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228689422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd04d22e130308441b5e3f81faa868d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1528456555
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,10 +1054,11 @@ MonoBehaviour:
   baseObject: {fileID: 1528456558}
   bodyAnchor: {fileID: 236582857}
   stateConfigurations:
-  - {swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}, swapBody: {fileID: 930786958}}
-  - {swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}, swapBody: {fileID: 2097938554}}
+  - swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}
+    swapBody: {fileID: 930786958}
+  - swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}
+    swapBody: {fileID: 2097938554}
   prewarmStates: 1
-  currentState: {fileID: 0}
 --- !u!4 &1528456557
 Transform:
   m_ObjectHideFlags: 0
@@ -1245,11 +1352,13 @@ MonoBehaviour:
   baseObject: {fileID: 1973970620}
   bodyAnchor: {fileID: 297831305}
   stateConfigurations:
-  - {swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}, swapBody: {fileID: 669754489}}
-  - {swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}, swapBody: {fileID: 2052325865}}
-  - {swapState: {fileID: 11400000, guid: 50150d38f89481c43a83b0f1e519f0fa, type: 2}, swapBody: {fileID: 645869003602319408, guid: 096196bedd3546140b673269e1fc6aa6, type: 3}}
+  - swapState: {fileID: 11400000, guid: 76655ad567dbe4f4abdf6a35d3584cf2, type: 2}
+    swapBody: {fileID: 669754489}
+  - swapState: {fileID: 11400000, guid: 9c0b827c50511a543b9dc7e9ded8a9b9, type: 2}
+    swapBody: {fileID: 2052325865}
+  - swapState: {fileID: 11400000, guid: 50150d38f89481c43a83b0f1e519f0fa, type: 2}
+    swapBody: {fileID: 645869003602319408, guid: 096196bedd3546140b673269e1fc6aa6, type: 3}
   prewarmStates: 1
-  currentState: {fileID: 0}
 --- !u!114 &1973970620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,3 +1720,4 @@ SceneRoots:
   - {fileID: 1711872368}
   - {fileID: 1113548172}
   - {fileID: 691955754}
+  - {fileID: 355946055}
