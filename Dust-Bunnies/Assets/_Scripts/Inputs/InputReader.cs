@@ -18,14 +18,13 @@ public class InputReader : MonoBehaviour
     // EVENTS   ---
     public event System.Action OnSprintPerformed;
     public event System.Action OnInteractPerformed;
+    public event System.Action OnNextSnapshotPerformed;
+
     public event System.Action OnInteractExit;
     public event System.Action OnRotatePerformed;
     public event System.Action OnRotateExit;
     public event System.Action<float> OnZoomPerformed;
     public event System.Action OnZoomReset;
-
-    // DEBUG
-    public event System.Action OnNextScenePerformed;
 
     // OTHER    ---
     public InputActionMaps Maps => _inputs;       // TODO: bad practice
@@ -38,6 +37,8 @@ public class InputReader : MonoBehaviour
     void OnEnable() {
         _inputs.Default.Sprint.performed += SprintPerformed;
         _inputs.Default.Interact.performed += InteractPerformed;
+        _inputs.Default.NextSnapshot.performed += NextSnapshotPerformed;
+
         _inputs.Interact.Return.performed += InteractExitPerformed;
         _inputs.Interact.StartRotate.performed += RotatePerformed;
         _inputs.Interact.StartRotate.canceled += RotatePerformed;
@@ -45,11 +46,14 @@ public class InputReader : MonoBehaviour
         _inputs.Interact.ResetZoom.performed += ZoomReset;
 
         // DEBUG
-        _inputs.DEBUG.NextScene.performed += NextScenePerformed;
+        //_inputs.DEBUG.NextScene.performed += NextScenePerformed;
     }
 
     void OnDisable() {
+        _inputs.Default.Sprint.performed -= SprintPerformed;
         _inputs.Default.Interact.performed -= InteractPerformed;
+        _inputs.Default.NextSnapshot.performed -= NextSnapshotPerformed;
+
         _inputs.Interact.Return.performed -= InteractExitPerformed;
         _inputs.Interact.StartRotate.performed -= RotatePerformed;
         _inputs.Interact.StartRotate.canceled -= RotatePerformed;
@@ -57,7 +61,7 @@ public class InputReader : MonoBehaviour
         _inputs.Interact.ResetZoom.performed -= ZoomReset;
 
         // DEBUG
-        _inputs.DEBUG.NextScene.performed -= NextScenePerformed;
+        //_inputs.DEBUG.NextScene.performed -= NextScenePerformed;
 
         _inputs.Dispose();
     }
@@ -96,6 +100,9 @@ public class InputReader : MonoBehaviour
     private void InteractPerformed(InputAction.CallbackContext _) => 
         OnInteractPerformed?.Invoke();
 
+    private void NextSnapshotPerformed(InputAction.CallbackContext _) =>
+        OnNextSnapshotPerformed?.Invoke();
+
     private void InteractExitPerformed(InputAction.CallbackContext _) =>
         OnInteractExit?.Invoke();
 
@@ -109,6 +116,4 @@ public class InputReader : MonoBehaviour
 
     private void ZoomReset(InputAction.CallbackContext _) =>
         OnZoomReset?.Invoke();
-    private void NextScenePerformed(InputAction.CallbackContext _) =>
-        OnNextScenePerformed?.Invoke();
 }

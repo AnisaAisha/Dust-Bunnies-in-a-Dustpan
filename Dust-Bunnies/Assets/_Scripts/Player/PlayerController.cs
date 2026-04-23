@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInteract interact;
     [SerializeField] private PlayerCamera cam;
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private Transform room;
     [SerializeField] private Collider myCollider;
     [SerializeField] private GameObject crosshair;
 
@@ -23,19 +24,27 @@ public class PlayerController : MonoBehaviour
     public Collider MyCollider => myCollider;
 
     private PlayerState _currentState;
+    private Transform _t;
 
     //void Awake() {
     //    PlayerInit();
     //}
 
     void Start() {
+        _t = transform;
         PlayerInit();       // TODO: not good here
         // begin the game in default state
         SwitchState(new DefaultState(this, input));
     }
 
     private void PlayerInit() {
+        GameManager.OnLoadNextSnapshot += SavePlayerData;
+
         GameManager.Player = this;
+        if (GameManager.hasStoredData == true) {
+            _t.position = GameManager.playerCoords;
+            _t.rotation = GameManager.playerRotation;
+        }
     }
 
     // TODO: check this later
@@ -52,6 +61,15 @@ public class PlayerController : MonoBehaviour
     public void EnableCrosshair() => crosshair.SetActive(true);
     public void DisableCrosshair() => crosshair.SetActive(false);
 
+    private void SavePlayerData() {
+        Vector3 relativePos = room.InverseTransformPoint(_t.position);
+        relativePos.y += 0.2f;      // TODO: jank asf. add a floor check or gravity
 
-    // TODO: seperate this eventually into a scene loader class that sends an event to store these coords
+        Quaternion relativeRot = Quaternion.Inverse(room.rotation)
+                                * _t.rotation;
+
+        GameManager.StorePlayerPosition(relativePos, relativeRot);
+
+        GameManager.OnLoadNextSnapshot -= SavePlayerData;
+    }
 }
