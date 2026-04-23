@@ -61,7 +61,22 @@ public class InputReader : MonoBehaviour
 
         _inputs.Dispose();
     }
-
+    //for pause menu to disable/enable locked inputs
+    public void SetEnabled(bool enabled)
+    {
+        if (enabled)
+        {
+            _inputs.Default.Enable();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            _inputs.Default.Disable();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
     public void SwitchMaps(InputActionMap newMap) {
         // DEBUG --
         if (newMap.name == "Default") {

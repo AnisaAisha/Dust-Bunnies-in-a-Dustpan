@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: big_rug
-    second: {fileID: 2100000, guid: d0b3d9e4873baff4493c368d982305b8, type: 2}
+      name: outline_shader
+    second: {fileID: 2100000, guid: 5ad9ea5c94c803149b43fc7017e5b93d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -51,7 +51,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
