@@ -3,7 +3,17 @@ guid: bfe11dbddee4d764eaa422d329c0b72d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_panels
+    second: {fileID: 2100000, guid: 471cb370de388fd47a8ed31efbf89f71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: b6a81517b9846d445ad7e595f7fdb509, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

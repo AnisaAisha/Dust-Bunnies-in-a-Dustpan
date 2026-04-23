@@ -3,7 +3,22 @@ guid: 399630c91a10afb41a9ca2058d15afea
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: c3aa206c21da28f4e9830d787e65a609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: water_color_shader
+    second: {fileID: 2100000, guid: 63f0c79b6b13d534582f36792d1d97be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: water_color_shader.001
+    second: {fileID: 2100000, guid: fd382b95159137349b1a0c881a783d6a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
