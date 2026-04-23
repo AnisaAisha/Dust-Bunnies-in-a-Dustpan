@@ -7,11 +7,14 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private SceneFader sceneFader;
 
-    public event System.Action OnLoadNextScene;
+    void Start() {
+        GameManager.OnLoadNextSnapshot += LoadNextScene;
+    }
+
     public void LoadNextScene() {
-        OnLoadNextScene?.Invoke();
         int index = SceneManager.GetActiveScene().buildIndex + 1;
         StartCoroutine(NextScene(index));
+        GameManager.OnLoadNextSnapshot -= LoadNextScene;
     }
 
     private IEnumerator NextScene(int index) {

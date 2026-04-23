@@ -67,16 +67,16 @@ public class PlayerCamera : MonoBehaviour
         transform.Rotate(Vector3.up * currRotationSpeedZ);
 
         // Manual Cam Controls
-        if (Input.GetKeyDown(KeyCode.Q) && currentCamState == CamState.Free) {
-            SetCamStateLookAroundLeft();
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && currentCamState == CamState.Free) {
-            SetCamStateLookAroundRight();
-        }
-        else if ((Input.GetKeyUp(KeyCode.Q) && currentCamState == CamState.LockedLookAroundLeft)
-                || (Input.GetKeyUp(KeyCode.E) && currentCamState == CamState.LockedLookAroundRight)) {
-            SetCamStateReturnFree();
-        }
+        //if (Input.GetKeyDown(KeyCode.Q) && currentCamState == CamState.Free) {
+        //    SetCamStateLookAroundLeft();
+        //}
+        //else if (Input.GetKeyDown(KeyCode.E) && currentCamState == CamState.Free) {
+        //    SetCamStateLookAroundRight();
+        //}
+        //else if ((Input.GetKeyUp(KeyCode.Q) && currentCamState == CamState.LockedLookAroundLeft)
+        //        || (Input.GetKeyUp(KeyCode.E) && currentCamState == CamState.LockedLookAroundRight)) {
+        //    SetCamStateReturnFree();
+        //}
     }
 
     /// <summary>

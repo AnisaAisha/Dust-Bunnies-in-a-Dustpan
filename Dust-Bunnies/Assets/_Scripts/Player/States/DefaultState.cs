@@ -13,7 +13,7 @@ public class DefaultState : PlayerState
 
         input.SwitchMaps(input.Maps.Default);
         input.OnInteractPerformed += OnInteract;
-        input.OnNextScenePerformed += NextScene;
+        input.OnNextSnapshotPerformed += NextSnapshot;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -23,7 +23,7 @@ public class DefaultState : PlayerState
     // but i don't think that's clean
     public override void Exit() {
         input.OnInteractPerformed -= OnInteract;
-        input.OnNextScenePerformed -= NextScene;
+        input.OnNextSnapshotPerformed -= NextSnapshot;
 
         base.Exit();
     }
@@ -47,10 +47,7 @@ public class DefaultState : PlayerState
         // player.SwitchState(new InteractState(player, input));
     }
 
-    // DEBUG
-    private void NextScene() {
-        Exit();
-        //input.Maps.Dispose();           // TODO: bad practice. should not have direct access
-        //player.Debug.NextScene();
+    private void NextSnapshot() {
+        GameManager.NextSnapshot();
     }
 }
