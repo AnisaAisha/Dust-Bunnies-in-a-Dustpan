@@ -16,15 +16,15 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    public void FadeTo(int index)
-    {
-        Debug.Log("To Scene: " + index);
+    //public void FadeTo(int index)
+    //{
+    //    Debug.Log("To Scene: " + index);
 
-        // TODO: bootstrapped
-        //if (index > SceneManager.sceneCount) { index = 0; }
+    //    // TODO: bootstrapped
+    //    //if (index > SceneManager.sceneCount) { index = 0; }
 
-        StartCoroutine(FadeToScene(index));
-    }
+    //    StartCoroutine(FadeToScene(index));
+    //}
 
     public IEnumerator FadeIn() {
         float t = fadeTime;
@@ -49,37 +49,15 @@ public class SceneFader : MonoBehaviour
         }
     }
 
-    IEnumerator FadeToScene(int index) {
-        float t = 0f;    // time
+    //IEnumerator FadeToScene(int index) {
+    //    float t = 0f;    // time
 
-        while (t < fadeTime)
-        {
-            t += Time.deltaTime;
-            float a = curve.Evaluate(t);
-            img.color = new Color(0f, 0f, 0f, t);
-            yield return 0;         // wait a frame and then continue
-        }
-        switch (index)
-        {
-            case 0:
-                AkUnitySoundEngine.SetState("Scene", "Mirror");
-                break;
-
-            case 1:
-                AkUnitySoundEngine.SetState("Scene", "Key1");
-                break;
-
-            case 2:
-                AkUnitySoundEngine.SetState("Scene", "Key2");
-                break;
-
-            case 3:
-                AkUnitySoundEngine.SetState("Scene", "Key3");
-                break;
-
-            default:
-                break;
-        }
-        SceneManager.LoadScene(index);
-    }
+    //    while (t < fadeTime)
+    //    {
+    //        t += Time.deltaTime;
+    //        float a = curve.Evaluate(t);
+    //        img.color = new Color(0f, 0f, 0f, t);
+    //        yield return 0;         // wait a frame and then continue
+    //    }
+    //}
 }

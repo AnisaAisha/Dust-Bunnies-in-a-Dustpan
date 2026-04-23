@@ -10,7 +10,7 @@ public class PlayerDEBUG : MonoBehaviour
     [SerializeField] private SceneFader sceneFader;
 
 
-    public void NextScene() {
-        sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    //public void NextScene() {
+    //    sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex + 1);
+    //}
 }

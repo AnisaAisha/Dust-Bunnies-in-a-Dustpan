@@ -51,6 +51,6 @@ public class DefaultState : PlayerState
     private void NextScene() {
         Exit();
         //input.Maps.Dispose();           // TODO: bad practice. should not have direct access
-        player.Debug.NextScene();
+        //player.Debug.NextScene();
     }
 }

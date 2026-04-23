@@ -4,6 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+
     private Vector3 playerCoords;       // used for when the player teleports to a new scene and coords need to be preserved
     private Quaternion playerRotation;  // ^
      

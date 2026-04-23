@@ -6,22 +6,43 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Final_Scenes/Old/Starting_Room.unity
-    guid: 999f73479289f234a8b0818d1afc8559
+    path: Assets/_Scenes/Final_Scenes/Snapshot 0/Snapshot 0.unity
+    guid: 6a475bf4a7b11494f8bb4d94d4db7821
   - enabled: 1
-    path: Assets/_Scenes/Final_Scenes/Old/Key_1.unity
-    guid: aecb06ab6cd99f941aa96f52b8868119
+    path: Assets/_Scenes/Final_Scenes/Snapshot 1/Snapshot 1.unity
+    guid: d72ca3ace48eee84399e4b517c8b051b
   - enabled: 1
-    path: Assets/_Scenes/Final_Scenes/Old/Key_2.unity
-    guid: 3a6366f1a4ca5d64ab634f8120fe08b7
+    path: Assets/_Scenes/Final_Scenes/Snapshot 2/Snapshot 2.unity
+    guid: d4a654b6ad3f58c40ac49b4cf8743d07
   - enabled: 1
-    path: Assets/_Scenes/Final_Scenes/Old/Key_3.unity
-    guid: 44de5ed4c1a2e8643bd02dbb66bda7cf
+    path: Assets/_Scenes/Final_Scenes/Snapshot 3/Snapshot 3.unity
+    guid: e65780361505af2469d84837d2a681fd
   - enabled: 1
-    path: Assets/_Scenes/Final_Scenes/Old/M2_END.unity
-    guid: 03364b6cbf3ab944b98fed6a66e62ffb
+    path: Assets/_Scenes/Final_Scenes/Snapshot 4/Snapshot 4.unity
+    guid: becf56ba288915644b13e60e4c3e45cc
   - enabled: 1
-    path: Assets/_Scenes/Daniel Je/Minigame 1/Section 3/Section 3.unity
-    guid: 1cbf7325282edd64492535c7bdec0e5d
+    path: Assets/_Scenes/Final_Scenes/Snapshot 5/Snapshot 5.unity
+    guid: 686302de878d1004786b1dae04b95ad2
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 6/Snapshot 6.unity
+    guid: cb52770ea14578b4ba406e5a26f4b853
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 7/Snapshot 7.unity
+    guid: c1f4433a540cdf44eb0ef24d0154a51d
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 8/Snapshot 8.unity
+    guid: 6c038213ca2373e4c8ee6f18251d5a22
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 9/Snapshot 9.unity
+    guid: 53541c0149b5b114090010de584d6e12
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 10/Snapshot 10.unity
+    guid: 9b78d9bbbd4e71446b7807af9d916d60
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 11/Snapshot 11.unity
+    guid: e52e0f52fb0820f47876c892d65b0634
+  - enabled: 1
+    path: Assets/_Scenes/Final_Scenes/Snapshot 12/Snapshot 12.unity
+    guid: 5fd8816545efb6a44890710b04ccd9e3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
